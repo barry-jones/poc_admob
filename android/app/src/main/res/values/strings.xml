@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">admob</string>
+    <string name="title_activity_main">admob</string>
+    <string name="package_name">io.ionic.admob</string>
+    <string name="custom_url_scheme">io.ionic.admob</string>
+</resources>
