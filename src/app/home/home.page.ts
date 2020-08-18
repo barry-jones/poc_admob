@@ -13,7 +13,7 @@ export class HomePage {
 
   constructor() {}
 
-  public showAdvert() {
+  public ngOnInit() {
     // Admob options config
     console.log(Admob);
     const admobOptions: AdmobOptions = {
@@ -22,17 +22,19 @@ export class HomePage {
       rewardedAdId: 'XXX-XXXX-XXXX',
       isTesting: true,
       autoShowBanner: false,
-      autoShowInterstitial: false,
+      autoShowInterstitial: true,
       autoShowRewarded: false,
-      adSize: Admob.AD_SIZE.BANNER
+      adSize: Admob.AD_SIZE.BANNER,
+      publisherId: 'pub-1981652597494266'
     };
 
     // Set admob options
     this.adverts.setOptions(admobOptions)
       .then(() => console.log('Admob options have been successfully set'))
       .catch(err => console.error('Error setting admob options:', err));
-
-    return true;
   }
 
+  public showAdvert() {
+    this.adverts.requestInterstitialAd();
+  }
 }
