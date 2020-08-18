@@ -21,4 +21,12 @@ describe('HomePage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('adverts', () => {
+    it('should show an advert', () => {
+      var displayed = component.showAdvert();
+
+      expect(displayed).toBe(true);
+    })
+  })
 });
